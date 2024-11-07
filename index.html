@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Girlfriend?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Welcome Page -->
+    <section id="welcome">
+        <h1>Welcome to Our Love Story ❤️</h1>
+        <button onclick="nextPage('welcome', 'quiz')">Start</button>
+    </section>
+
+    <!-- Quiz Page -->
+    <section id="quiz" style="display:none;">
+        <h2>A Few Fun Questions</h2>
+        <p>1. Do you remember our first date?</p>
+        <p>2. What's our favorite place to eat?</p>
+        <p>3. What's something you love about us?</p>
+        <button onclick="nextPage('quiz', 'photos')">Next</button>
+    </section>
+
+    <!-- Photo Gallery Page -->
+    <section id="photos" style="display:none;">
+        <h2>Our Moments Together 📸</h2>
+        <div class="gallery">
+            <!-- Add your photos here -->
+            <img src="photo1.jpg" alt="Moment 1">
+            <img src="photo2.jpg" alt="Moment 2">
+            <img src="photo3.jpg" alt="Moment 3">
+        </div>
+        <button onclick="nextPage('photos', 'question')">Proceed</button>
+    </section>
+
+    <!-- Main Question Page -->
+    <section id="question" style="display:none;">
+        <h2>Will you be my girlfriend? 💖</h2>
+        <button onclick="showResponse('yes')">Yes</button>
+        <button onclick="showResponse('no')">No</button>
+    </section>
+
+    <!-- Response Pages -->
+    <section id="yes-response" style="display:none;">
+        <h2>Yay! 💕 You made me the happiest!</h2>
+        <img src="happy-meme.jpg" alt="Happy Meme">
+    </section>
+    <section id="no-response" style="display:none;">
+        <h2>Oh no! 😢</h2>
+        <img src="sad-meme.jpg" alt="Sad Meme">
+        <button onclick="showQuestion()">Go Back</button>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
